@@ -1,0 +1,336 @@
+/* DJU v02 — extend v01's home typography, whitespace and rules to TWO routes.
+   No other routes, images, copy, data, links or JavaScript are modified. */
+
+section.dju-inner-v02 {
+  --inner-green: #075c43;
+  --inner-ink: #202c25;
+  --inner-muted: #59695f;
+  --inner-rule: #dce4df;
+  padding: 60px 0 76px;
+  color: var(--inner-ink);
+  font-family: "Noto Sans CJK KR", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: -.025em;
+}
+.dju-inner-v02 > .hd {
+  display: block;
+  margin: 0 0 14px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.dju-inner-v02 > .hd h1 {
+  margin: 0;
+  color: #163e2c;
+  font-size: clamp(28px, 2.8vw, 34px);
+  line-height: 1.45;
+  font-weight: 750;
+  letter-spacing: -.045em;
+  text-shadow: none;
+}
+.dju-inner-v02 > p {
+  margin: 0;
+  color: var(--inner-muted);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+/* Colleges: keep all nine illustrations and all existing entries.
+   Each college is a directory row, not a colored card containing more cards. */
+#dju-departments-v02 .college-list137 {
+  display: block;
+  margin: 38px 0 28px;
+  padding: 0;
+}
+#dju-departments-v02 article.college137:nth-of-type(n) {
+  display: grid;
+  grid-template-columns: 335px minmax(0, 1fr);
+  align-items: start;
+  gap: 30px;
+  margin: 0;
+  padding: 30px 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--inner-rule);
+  border-radius: 0;
+  box-shadow: none;
+}
+#dju-departments-v02 article.college137 header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+#dju-departments-v02 article.college137 header img {
+  display: block;
+  flex: 0 0 56px;
+  width: 56px;
+  height: 82px;
+  max-width: 100%;
+  object-fit: contain;
+  mix-blend-mode: normal;
+  filter: none;
+}
+#dju-departments-v02 article.college137 header div { min-width: 0; }
+#dju-departments-v02 article.college137 header span {
+  color: #69776f;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+#dju-departments-v02 article.college137 header h2 {
+  margin: 5px 0 0;
+  color: var(--inner-green);
+  font-size: 23px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: -.045em;
+  text-shadow: none;
+  overflow-wrap: anywhere;
+}
+#dju-departments-v02 article.college137 ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#dju-departments-v02 article.college137 li {
+  min-width: 0;
+  padding: 13px 0;
+  border: 0;
+  border-bottom: 1px solid #edf1ee;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--inner-ink);
+  font-size: 15.5px;
+  line-height: 1.75;
+  font-weight: 500;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+#dju-departments-v02 article.college137:last-of-type ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+#dju-departments-v02 .college-list137 > .note {
+  margin: 0;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--inner-rule);
+  color: #69776f;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+#dju-departments-v02 #ebook {
+  min-height: 46px;
+  padding: 11px 22px;
+  background: var(--inner-green);
+  color: #fff;
+  border: 1px solid var(--inner-green);
+  border-radius: 3px;
+  box-shadow: none;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 650;
+  cursor: pointer;
+}
+#dju-departments-v02 #ebook:hover { background: #054432; }
+
+/* Schedule: preserve both tabs, all time values and the original row order. */
+#dju-schedule-v02 .tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 32px 0 24px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+#dju-schedule-v02 .tabs .btn {
+  min-width: 0;
+  min-height: 54px;
+  padding: 12px 16px;
+  border: 1px solid #c9d6ce;
+  border-radius: 2px;
+  background: #fff;
+  color: var(--inner-green);
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.6;
+  box-shadow: none;
+}
+#dju-schedule-v02 .tabs .btn[aria-selected=true] {
+  background: var(--inner-green);
+  border-color: var(--inner-green);
+  color: #fff;
+  box-shadow: none;
+}
+#dju-schedule-v02 .tabs .btn[aria-selected=false]:hover {
+  background: #f3f7f4;
+  color: var(--inner-green);
+}
+#dju-schedule-v02 [role=tabpanel] { min-width: 0; }
+#dju-schedule-v02 .band,
+#dju-schedule-v02 #p1 .band {
+  display: block;
+  margin: 0 0 32px;
+  padding: 16px 20px;
+  border: 0;
+  border-left: 3px solid var(--inner-green);
+  border-radius: 0;
+  background: #f5f8f6;
+  color: #34493d;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.85;
+  box-shadow: none;
+}
+#dju-schedule-v02 .band::before,
+#dju-schedule-v02 #p1 .band::before { content: none; display: none; }
+#dju-schedule-v02 #p1 p {
+  max-width: 58em;
+  margin: 0;
+  color: var(--inner-muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+#dju-schedule-v02 .tt148 {
+  margin: 0 0 18px;
+  color: var(--inner-green);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: -.035em;
+}
+#dju-schedule-v02 .tl148 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  border-top: 2px solid var(--inner-green);
+}
+#dju-schedule-v02 .tl148 li:nth-child(n) {
+  display: grid;
+  grid-template-columns: 212px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 25px 12px;
+  border: 0;
+  border-bottom: 1px solid var(--inner-rule);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+#dju-schedule-v02 .tl148 li:nth-child(n) > span {
+  width: auto;
+  color: var(--inner-green);
+  font-size: 22px;
+  font-weight: 650;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  letter-spacing: -.025em;
+}
+#dju-schedule-v02 .tl148 li > strong {
+  color: var(--inner-ink);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.65;
+}
+.dju-inner-v02 :is(button, [tabindex="0"]):focus-visible {
+  outline: 2px solid #075c43;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1100px) {
+  #dju-departments-v02 article.college137:nth-of-type(n) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  #dju-departments-v02 article.college137 header img { height: 72px; }
+}
+@media (max-width: 760px) {
+  #dju-departments-v02 article.college137 ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  section.dju-inner-v02 { padding: 36px 4px 48px; font-size: 15px; }
+  .dju-inner-v02 > .hd { margin-bottom: 14px; }
+  .dju-inner-v02 > .hd h1 { font-size: 27px; }
+  .dju-inner-v02 > p { font-size: 15px; line-height: 1.9; }
+  #dju-departments-v02 .college-list137 { margin: 28px 0 24px; }
+  #dju-departments-v02 article.college137:nth-of-type(n) { padding: 25px 0; gap: 14px; }
+  #dju-departments-v02 article.college137 header { gap: 14px; }
+  #dju-departments-v02 article.college137 header img { flex-basis: 44px; width: 44px; height: 64px; }
+  #dju-departments-v02 article.college137 header h2 { font-size: 21px; margin-top: 4px; }
+  #dju-departments-v02 article.college137 ul,
+  #dju-departments-v02 article.college137:last-of-type ul { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  #dju-departments-v02 article.college137 li { padding: 10px 0; font-size: 15px; }
+  #dju-departments-v02 .college-list137 > .note { font-size: 12px; padding-top: 20px; }
+  #dju-departments-v02 #ebook { width: 100%; }
+  #dju-schedule-v02 .tabs { margin: 28px 0 22px; }
+  #dju-schedule-v02 .tabs .btn { font-size: 14px; min-height: 50px; padding: 11px 8px; }
+  #dju-schedule-v02 .band, #dju-schedule-v02 #p1 .band { padding: 14px 16px; margin-bottom: 26px; font-size: 14px; }
+  #dju-schedule-v02 #p1 p { font-size: 15px; }
+  #dju-schedule-v02 .tt148 { font-size: 21px; margin-bottom: 16px; }
+  #dju-schedule-v02 .tl148 li:nth-child(n) { grid-template-columns: 120px minmax(0, 1fr); gap: 14px; padding: 21px 0; }
+  #dju-schedule-v02 .tl148 li:nth-child(n) > span { font-size: 18px; }
+  #dju-schedule-v02 .tl148 li > strong { font-size: 16px; }
+}
+@media (max-width: 359px) {
+  #dju-departments-v02 article.college137 header h2 { font-size: 20px; }
+  #dju-schedule-v02 .tl148 li:nth-child(n) { grid-template-columns: 108px minmax(0, 1fr); gap: 12px; }
+  #dju-schedule-v02 .tl148 li:nth-child(n) > span { font-size: 17px; }
+  #dju-schedule-v02 .tl148 li > strong { font-size: 15px; }
+}
+
+/* v04: v02 outer layout restored; v03 action buttons and tabs remain. */
+#dju-departments-v02 #ebook,
+#dju-schedule-v02 .tabs .btn,
+[data-r=register] .btn,
+#dlg .btn {
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid #075c43;
+  border-radius: 14px;
+  background: #fff;
+  color: #075c43;
+  box-shadow: 0 6px 18px rgba(7,92,67,.08);
+}
+#dju-departments-v02 #ebook:hover,
+#dju-schedule-v02 .tabs .btn[aria-selected=false]:hover,
+[data-r=register] .btn:hover,
+#dlg .btn:hover {
+  background: #f3f8f5;
+}
+#dju-schedule-v02 .tabs {
+  gap: 14px;
+  margin: 32px 0 26px;
+}
+#dju-schedule-v02 .tabs .btn[aria-selected=true] {
+  background: #075c43;
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(7,92,67,.16);
+}
+
+@media (max-width: 640px) {
+  #dju-schedule-v02 .tabs { gap: 10px; }
+}

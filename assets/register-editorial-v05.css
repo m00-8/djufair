@@ -1,0 +1,314 @@
+/* DJU v05 — Registration route only.
+   Existing text, order, links, pending states and scripts are kept intact.
+   No rules below apply to the hero, navigation, other routes or footer. */
+section[data-r="register"] {
+  --reg-green: #075c43;
+  --reg-ink: #202c25;
+  --reg-muted: #59695f;
+  --reg-rule: #dce4df;
+  padding: 60px 0 76px;
+  color: var(--reg-ink);
+  background: #fff;
+  font-family: "Noto Sans CJK KR", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: -.025em;
+}
+section[data-r="register"] > .hd {
+  display: block;
+  margin: 0 0 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+section[data-r="register"] > .hd h1 {
+  margin: 0;
+  color: #163e2c;
+  font-size: clamp(28px, 2.8vw, 34px);
+  line-height: 1.45;
+  font-weight: 750;
+  letter-spacing: -.045em;
+  text-shadow: none;
+}
+section[data-r="register"] :is(h2, p, li, strong, span, small) {
+  text-shadow: none;
+}
+section[data-r="register"] h2,
+section[data-r="register"] > .hd h2 {
+  margin: 0;
+  color: var(--reg-green);
+  font-size: 24px;
+  line-height: 1.55;
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+
+/* Basic information: two unboxed columns, a shared typographic rhythm. */
+section[data-r="register"] .loc148 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 36px;
+  margin: 0 0 40px;
+  padding: 0;
+  list-style: none;
+}
+section[data-r="register"] .loc148 li:nth-child(n) {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  min-width: 0;
+  margin: 0;
+  padding: 18px 0;
+  border: 0;
+  border-top: 1px solid var(--reg-rule);
+  border-bottom: 1px solid var(--reg-rule);
+  border-radius: 0;
+  background: transparent;
+  color: var(--reg-ink);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.8;
+  box-shadow: none;
+}
+section[data-r="register"] .loc148 li:nth-child(n) > span {
+  display: block;
+  margin: 0;
+  padding: 2px 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--reg-muted);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* Remove decorative emoji and nested tinted panels; keep all wording. */
+section[data-r="register"] .fit148 {
+  margin: 0 0 42px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+section[data-r="register"] .fit148 h2 { margin: 0 0 17px; }
+section[data-r="register"] .fit148 [aria-hidden="true"] { display: none; }
+section[data-r="register"] .fit148 ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 36px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+section[data-r="register"] .fit148 li {
+  position: relative;
+  display: block;
+  min-width: 0;
+  margin: 0;
+  padding: 13px 0 13px 16px;
+  border: 0;
+  border-bottom: 1px solid #edf1ee;
+  border-radius: 0;
+  background: transparent;
+  color: var(--reg-ink);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  box-shadow: none;
+}
+section[data-r="register"] .fit148 li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 4px;
+  height: 4px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--reg-green);
+}
+
+/* Registration methods: same content/order, no outer card framing. */
+section[data-r="register"] .g.rg {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+}
+section[data-r="register"] .rg .card:nth-child(n) {
+  min-width: 0;
+  margin: 0;
+  padding: 22px 0 0;
+  border: 0;
+  border-top: 2px solid var(--reg-green);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+section[data-r="register"] .rg .card:nth-child(n) h2 {
+  margin: 0 0 15px;
+  color: var(--reg-green);
+  font-size: 24px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+section[data-r="register"] .rg .card:nth-child(n) p {
+  margin: 0 0 13px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--reg-muted);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9;
+  box-shadow: none;
+}
+section[data-r="register"] .rg .card:nth-child(n) :is(.perk148, .at148) {
+  color: #34493d;
+  font-weight: 500;
+}
+section[data-r="register"] .rg .card:nth-child(n) p:last-child { margin-bottom: 0; }
+
+/* Prepare-for-your-visit checklist: unboxed rows and minimal check marks. */
+section[data-r="register"] .rg + .hd { margin: 44px 0 19px; }
+section[data-r="register"] .chk {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--reg-rule);
+  list-style: none;
+}
+section[data-r="register"] .chk li {
+  position: relative;
+  margin: 0;
+  padding: 15px 0 15px 27px;
+  border: 0;
+  border-bottom: 1px solid #edf1ee;
+  border-radius: 0;
+  background: transparent;
+  color: var(--reg-ink);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.85;
+  box-shadow: none;
+}
+section[data-r="register"] .chk li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 23px;
+  width: 6px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  border: solid var(--reg-green);
+  border-width: 0 1.7px 1.7px 0;
+  border-radius: 0;
+  background: transparent;
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+section[data-r="register"] .chk li::after { content: none; display: none; }
+section[data-r="register"] .chk small {
+  display: block;
+  margin: 3px 0 0;
+  color: #69776f;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* Closing information uses a rule instead of the orange callout box. */
+section[data-r="register"] .walkin148 {
+  margin: 30px 0 0;
+  padding: 3px 0 3px 18px;
+  border: 0;
+  border-left: 2px solid var(--reg-green);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+section[data-r="register"] .walkin148 strong {
+  display: block;
+  color: var(--reg-green);
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.65;
+}
+section[data-r="register"] .walkin148 span {
+  display: block;
+  margin-top: 4px;
+  color: var(--reg-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+/* The existing v04 boxed action is retained; no URL or behaviour is changed. */
+section[data-r="register"] > p:last-child { margin-bottom: 0; }
+section[data-r="register"] #reg {
+  min-height: 48px;
+  background: var(--reg-green);
+  border-color: var(--reg-green);
+  color: #fff;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+}
+section[data-r="register"] #reg:hover {
+  background: #054432;
+  border-color: #054432;
+  color: #fff;
+}
+section[data-r="register"] #reg:focus-visible {
+  outline: 2px solid var(--reg-green);
+  outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  section[data-r="register"] .loc148,
+  section[data-r="register"] .fit148 ul,
+  section[data-r="register"] .g.rg { grid-template-columns: minmax(0, 1fr); }
+  section[data-r="register"] .loc148 { gap: 0; }
+  section[data-r="register"] .loc148 li:nth-child(n) + li:nth-child(n) { border-top: 0; }
+  section[data-r="register"] .g.rg { gap: 28px; }
+}
+@media (max-width: 640px) {
+  section[data-r="register"] { padding: 36px 4px 48px; font-size: 15px; }
+  section[data-r="register"] > .hd { margin-bottom: 21px; }
+  section[data-r="register"] > .hd h1 { font-size: 27px; }
+  section[data-r="register"] h2,
+  section[data-r="register"] > .hd h2,
+  section[data-r="register"] .rg .card:nth-child(n) h2 { font-size: 21px; }
+  section[data-r="register"] .loc148 { margin-bottom: 31px; }
+  section[data-r="register"] .loc148 li:nth-child(n) {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 12px;
+    padding: 15px 0;
+    font-size: 15px;
+  }
+  section[data-r="register"] .loc148 li:nth-child(n) > span { font-size: 13px; }
+  section[data-r="register"] .fit148 { margin-bottom: 32px; }
+  section[data-r="register"] .fit148 h2 { margin-bottom: 12px; }
+  section[data-r="register"] .fit148 li { padding-top: 12px; padding-bottom: 12px; font-size: 15px; }
+  section[data-r="register"] .fit148 li::before { top: 24px; }
+  section[data-r="register"] .rg .card:nth-child(n) { padding-top: 18px; }
+  section[data-r="register"] .rg .card:nth-child(n) h2 { margin-bottom: 12px; }
+  section[data-r="register"] .rg .card:nth-child(n) p { font-size: 15px; line-height: 1.9; }
+  section[data-r="register"] .rg + .hd { margin-top: 34px; margin-bottom: 16px; }
+  section[data-r="register"] .chk li { padding: 14px 0 14px 25px; font-size: 15px; }
+  section[data-r="register"] .chk li::before { top: 22px; }
+  section[data-r="register"] .chk small { font-size: 13px; }
+  section[data-r="register"] .walkin148 { margin-top: 26px; padding-left: 14px; }
+  section[data-r="register"] .walkin148 strong { font-size: 17px; }
+  section[data-r="register"] .walkin148 span { font-size: 15px; }
+  section[data-r="register"] #reg { width: 100%; font-size: 15px; }
+}

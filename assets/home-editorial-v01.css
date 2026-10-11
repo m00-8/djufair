@@ -1,0 +1,602 @@
+/* DJU v01 — home-only editorial cleanup + supplied hero.
+   Existing subpage content/styles and all actions remain in the original files.
+   Breakpoints only reflow existing elements; no content is invented. */
+
+.dju-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* The supplied banner is displayed whole, without regenerated type or crop. */
+#hero.dju-hero-v01 {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0;
+  margin: 0 auto;
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.dju-hero-media {
+  position: relative;
+  margin: 0;
+}
+.dju-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
+}
+.dju-hero-hotspot {
+  position: absolute;
+  top: 3.5%;
+  height: 9.8%;
+  min-height: 28px;
+  border-radius: 2px;
+}
+.dju-university-hotspot { left: 66.5%; width: 14.8%; }
+.dju-center-hotspot { left: 82.5%; width: 16%; }
+.dju-hero-hotspot:focus-visible {
+  outline: 2px solid #075c43;
+  outline-offset: 2px;
+  background: rgba(255,255,255,.15);
+}
+
+/* Same four destinations and sticky position; quieter shared navigation. */
+nav.dju-nav-v01 {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #fff;
+  border-top: 1px solid #e6eae7;
+  border-bottom: 1px solid #dbe3de;
+  box-shadow: none;
+}
+.dju-nav-v01 ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  align-items: center;
+  gap: 16px;
+  max-width: 1120px;
+  min-height: 72px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.dju-nav-v01 a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  padding: 10px 12px;
+  color: #42534a;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -.025em;
+  text-decoration: none;
+  transition: color .15s ease;
+}
+.dju-nav-v01 a:hover { color: #075c43; }
+.dju-nav-v01 a[aria-current] {
+  color: #075c43;
+  background: transparent;
+  font-weight: 800;
+}
+.dju-nav-v01 a[aria-current]::after {
+  content: '';
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  bottom: -1px;
+  height: 3px;
+  background: #075c43;
+}
+.dju-nav-v01 a[href="#register"] {
+  min-height: 44px;
+  margin: 0 10px;
+  padding: 10px 16px;
+  border: 1px solid #075c43;
+  border-radius: 3px;
+  color: #fff;
+  background: #075c43;
+}
+.dju-nav-v01 a[href="#register"]:hover,
+.dju-nav-v01 a[href="#register"][aria-current] {
+  background: #054432;
+  color: #fff;
+}
+.dju-nav-v01 a[href="#register"][aria-current]::after { content: none; }
+
+/* All main-body changes are scoped to the home route. */
+section.dju-home-v01 {
+  --home-ink: #202c25;
+  --home-green: #075c43;
+  --home-muted: #59695f;
+  --home-rule: #dce4df;
+  padding: 64px 0 76px;
+  color: var(--home-ink);
+  font-family: "Noto Sans CJK KR", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: -.025em;
+}
+.dju-home-v01 .dju-home-block { min-width: 0; }
+.dju-home-v01 .dju-home-block + .dju-home-block { margin-top: 60px; }
+.dju-home-v01 .hd {
+  display: flex;
+  align-items: center;
+  margin: 0 0 24px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.dju-home-v01 .hd h2 {
+  margin: 0;
+  color: var(--home-green);
+  font-size: clamp(24px, 2.5vw, 29px);
+  line-height: 1.45;
+  font-weight: 750;
+  letter-spacing: -.045em;
+  text-shadow: none;
+}
+.dju-home-v01 .dju-home-intro .hd { margin-bottom: 18px; }
+.dju-home-v01 .dju-home-intro h2 {
+  color: #163e2c;
+  font-size: clamp(26px, 2.8vw, 34px);
+  font-weight: 750;
+  line-height: 1.45;
+}
+.dju-home-v01 .lead {
+  max-width: 52em;
+  margin: 0;
+  color: var(--home-muted);
+  font-size: 17px;
+  line-height: 1.95;
+  font-weight: 400;
+}
+.dju-home-v01 .g {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+.dju-home-v01 .g > li.card:nth-child(n) {
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+  transition: none;
+}
+.dju-home-v01 .g.pg > li.card:nth-child(n) h3 {
+  margin: 17px 0 6px;
+  color: var(--home-ink);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -.035em;
+}
+.dju-home-v01 .g.pg > li.card:nth-child(n) p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--home-muted);
+}
+.dju-home-v01 .pg .program-photo81 {
+  display: block;
+  aspect-ratio: auto;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  overflow: hidden;
+}
+.dju-home-v01 .pg .card:nth-child(n) .program-photo81 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center !important;
+  border: 0;
+  filter: none;
+  transform: none;
+}
+.dju-home-v01 .note {
+  margin: 17px 0 0;
+  color: #69776f;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* Keep all three upcoming-event entries, without numbered fake photo tiles. */
+.dju-home-v01 .event84 > li.card:nth-child(n) {
+  padding: 21px 0 0;
+  border-top: 1px solid #becfc4;
+}
+.dju-home-v01 .event84 h3 {
+  margin: 0 0 8px;
+  color: #34493d;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+.dju-home-v01 .event84 p {
+  margin: 0;
+  color: var(--home-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Plain step numbers convey actual order rather than decorative badges. */
+.dju-home-v01 .dju-home-participation > p:not(.note) {
+  max-width: 60em;
+  margin: -8px 0 24px;
+  color: var(--home-muted);
+  line-height: 1.85;
+}
+.dju-home-v01 .steps {
+  display: grid;
+  grid-template-columns: repeat(5,minmax(0,1fr));
+  gap: 0;
+  counter-reset: st;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--home-rule);
+  border-bottom: 1px solid var(--home-rule);
+}
+.dju-home-v01 .steps li:nth-child(n) {
+  display: block;
+  position: relative;
+  min-width: 0;
+  counter-increment: st;
+  padding: 25px 19px 25px 20px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.dju-home-v01 .steps li:first-child { padding-left: 0; }
+.dju-home-v01 .steps li:last-child { padding-right: 0; }
+.dju-home-v01 .steps li + li { border-left: 1px solid #e8edea; }
+.dju-home-v01 .steps li:nth-child(n)::before {
+  content: counter(st) ".";
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 0 10px;
+  padding: 0;
+  background: transparent;
+  color: var(--home-green);
+  border: 0;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+.dju-home-v01 .steps strong {
+  display: block;
+  margin: 0 0 10px;
+  color: var(--home-ink);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+.dju-home-v01 .steps span {
+  display: block;
+  color: var(--home-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Real locations remain text, and the unconfirmed booth map stays unfilled. */
+.dju-home-v01 .loc148 {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1.3fr);
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+.dju-home-v01 .loc148 li:nth-child(n) {
+  display: grid;
+  grid-template-columns: 82px minmax(0,1fr);
+  align-items: start;
+  gap: 14px;
+  padding: 20px 0;
+  border: 0;
+  border-top: 1px solid var(--home-rule);
+  border-radius: 0;
+  background: transparent;
+  color: var(--home-ink);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.dju-home-v01 .loc148 li:nth-child(n) > span {
+  display: block;
+  margin: 2px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--home-muted);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.dju-home-v01 .ph.big {
+  display: grid;
+  place-items: center;
+  min-height: 174px;
+  aspect-ratio: auto;
+  margin: 8px 0 0;
+  padding: 32px 20px;
+  border: 1px solid #e1e6e3;
+  border-radius: 2px;
+  background: #f8faf8;
+  box-shadow: none;
+}
+.dju-home-v01 .ph.big span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #65766b;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: none;
+}
+.dju-home-v01 .ph.big span::before,
+.dju-home-v01 .ph.big span::after { content: none; }
+
+/* Existing footer assets and phone target, with reduced button decoration. */
+footer.dju-footer-v01 {
+  margin: 0;
+  background: #f8faf8;
+  border-top: 1px solid #dfe6e1;
+  color: #304b3b;
+}
+.dju-footer-v01 .w { padding-top: 32px; padding-bottom: 32px; }
+.dju-footer-v01 .tel153 {
+  gap: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.dju-footer-v01 .tel153:hover { box-shadow: none; }
+.dju-footer-v01 .tel153 svg {
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  background: transparent;
+  fill: #075c43;
+  border-radius: 0;
+}
+.dju-footer-v01 .tel153 b {
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+.dju-footer-v01 .tel153 span { font-weight: 500; color: #617469; }
+
+@media (max-width: 960px) {
+  .dju-home-v01 .steps { grid-template-columns: minmax(0,1fr); }
+  .dju-home-v01 .steps li:nth-child(n) {
+    display: grid;
+    grid-template-columns: 28px minmax(0,1fr);
+    column-gap: 16px;
+    padding: 20px 0;
+    border: 0;
+    border-bottom: 1px solid var(--home-rule);
+  }
+  .dju-home-v01 .steps li:last-child { border-bottom: 0; }
+  .dju-home-v01 .steps li:nth-child(n)::before {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    margin: 2px 0 0;
+  }
+  .dju-home-v01 .steps strong,
+  .dju-home-v01 .steps span { grid-column: 2; }
+  .dju-home-v01 .steps strong { margin-bottom: 4px; }
+  .dju-home-v01 .g { gap: 22px; }
+}
+
+@media (max-width: 640px) {
+  .dju-nav-v01 ul {
+    min-height: 59px;
+    grid-template-columns: 1.25fr 1fr .85fr 1fr;
+    gap: 4px;
+    padding: 0 10px;
+  }
+  .dju-nav-v01 a {
+    min-height: 58px;
+    padding: 8px 3px;
+    font-size: 13px;
+    letter-spacing: -.04em;
+    white-space: nowrap;
+  }
+  .dju-nav-v01 a[aria-current]::after { left: 8%; right: 8%; height: 2px; }
+  .dju-nav-v01 a[href="#register"] {
+    min-height: 38px;
+    margin: 0;
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+  section.dju-home-v01 { padding: 36px 4px 48px; font-size: 15px; }
+  .dju-home-v01 .dju-home-block + .dju-home-block { margin-top: 43px; }
+  .dju-home-v01 .hd { margin-bottom: 21px; }
+  .dju-home-v01 .hd h2 { font-size: 25px; }
+  .dju-home-v01 .dju-home-intro h2 { font-size: 27px; line-height: 1.45; }
+  .dju-home-v01 .lead { font-size: 15px; line-height: 1.95; }
+  .dju-home-v01 .g { grid-template-columns: minmax(0,1fr); gap: 30px; }
+  .dju-home-v01 .g.pg > li.card:nth-child(n) h3 { margin-top: 15px; font-size: 21px; }
+  .dju-home-v01 .g.pg > li.card:nth-child(n) p { font-size: 15px; }
+  .dju-home-v01 .event84 { gap: 18px; }
+  .dju-home-v01 .event84 > li.card:nth-child(n) { padding-top: 18px; }
+  .dju-home-v01 .event84 h3 { margin-bottom: 5px; font-size: 17px; }
+  .dju-home-v01 .event84 p { font-size: 14px; }
+  .dju-home-v01 .note { font-size: 12px; margin-top: 14px; }
+  .dju-home-v01 .dju-home-participation > p:not(.note) { margin-top: -7px; }
+  .dju-home-v01 .steps li:nth-child(n) { padding: 19px 0; column-gap: 12px; }
+  .dju-home-v01 .steps strong { font-size: 18px; }
+  .dju-home-v01 .steps span { font-size: 14px; }
+  .dju-home-v01 .loc148 { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .dju-home-v01 .loc148 li:nth-child(n) { padding: 16px 0; font-size: 16px; grid-template-columns: 72px minmax(0,1fr); }
+  .dju-home-v01 .loc148 li:nth-child(n) > span { font-size: 13px; }
+  .dju-home-v01 .ph.big { min-height: 148px; margin-top: 9px; }
+  .dju-home-v01 .ph.big span { font-size: 15px; }
+  .dju-footer-v01 .w { gap: 24px; padding: 25px 20px; }
+  .dju-footer-v01 .logos156 { gap: 12px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .dju-nav-v01 a { transition: none; }
+}
+
+/* Moving between routes focuses main; don't frame the entire page as a button. */
+main.w:focus-visible { outline: none; }
+@media (max-width: 600px) {
+  .dju-footer-v01 .logos156 { flex-wrap: nowrap; max-width: 100%; }
+  .dju-footer-v01 .logos156 .lg-dju { height: min(31px, calc((100vw - 66px) / 10.45)); }
+  .dju-footer-v01 .logos156 .lg-ui { height: min(24px, calc((100vw - 66px) / 13.55)); }
+  .dju-footer-v01 .logos156 .lg-mdsc { height: min(27.7px, calc((100vw - 66px) / 11.7)); }
+}
+
+/* v04: home outer sections use v02; v03 participation cards remain. */
+.dju-home-v01 .steps {
+  grid-template-columns: repeat(5,minmax(0,1fr));
+  gap: 16px;
+  border: 0;
+  background: transparent;
+}
+.dju-home-v01 .steps li:nth-child(n) {
+  padding: 18px 18px 17px;
+  border: 1px solid #dce4df;
+  border-radius: 18px;
+  background: #f9fbfa;
+  box-shadow: 0 8px 20px rgba(7,92,67,.04);
+}
+.dju-home-v01 .steps li:first-child,
+.dju-home-v01 .steps li:last-child { padding-left: 18px; padding-right: 18px; }
+.dju-home-v01 .steps li + li {
+  border-left: 1px solid #dce4df;
+}
+.dju-home-v01 .steps li:nth-child(n)::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin: 0 0 12px;
+  border: 1px solid #cfe0d7;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(7,92,67,.05);
+  font-size: 15px;
+}
+@media (max-width: 960px) {
+  .dju-home-v01 .steps {
+    grid-template-columns: minmax(0,1fr);
+    gap: 12px;
+  }
+  .dju-home-v01 .steps li:nth-child(n) {
+    grid-template-columns: 42px minmax(0,1fr);
+    padding: 16px 16px;
+    border: 1px solid #dce4df;
+    border-radius: 16px;
+  }
+  .dju-home-v01 .steps li:nth-child(n)::before {
+    width: 32px;
+    height: 32px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .dju-home-v01 .steps li:nth-child(n) { padding: 14px 14px; }
+}
+
+/* v04: all four route links are unboxed. Preserve their hit areas and focus. */
+.dju-nav-v01 a,
+.dju-nav-v01 a[href="#register"],
+.dju-nav-v01 a:hover,
+.dju-nav-v01 a[aria-current],
+.dju-nav-v01 a[href="#register"]:hover,
+.dju-nav-v01 a[href="#register"][aria-current] {
+  min-height: 70px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #42534a;
+  text-decoration: none;
+}
+.dju-nav-v01 a:hover,
+.dju-nav-v01 a[aria-current],
+.dju-nav-v01 a[href="#register"]:hover,
+.dju-nav-v01 a[href="#register"][aria-current] {
+  color: #075c43;
+}
+.dju-nav-v01 a[aria-current],
+.dju-nav-v01 a[href="#register"][aria-current] { font-weight: 800; }
+.dju-nav-v01 a[aria-current]::after,
+.dju-nav-v01 a[href="#register"][aria-current]::after {
+  content: '';
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  bottom: -1px;
+  height: 3px;
+  background: #075c43;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+@media (max-width: 640px) {
+  .dju-nav-v01 a,
+  .dju-nav-v01 a[href="#register"],
+  .dju-nav-v01 a:hover,
+  .dju-nav-v01 a[aria-current],
+  .dju-nav-v01 a[href="#register"]:hover,
+  .dju-nav-v01 a[href="#register"][aria-current] {
+    min-height: 58px;
+    padding: 8px 3px;
+    font-size: 13px;
+  }
+  .dju-nav-v01 a[aria-current]::after,
+  .dju-nav-v01 a[href="#register"][aria-current]::after {
+    left: 8%;
+    right: 8%;
+    height: 2px;
+  }
+}
